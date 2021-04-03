@@ -176,7 +176,7 @@ double dTimerTicksPerSecond()
 
 #if !defined(PENTIUM) && !defined(WIN32)
 
-#ifndef macintosh
+#if 1
 
 #include <sys/time.h>
 #include <unistd.h>
