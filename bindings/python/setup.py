@@ -11,10 +11,10 @@ except ImportError:
 
 try:
     ode_cflags = Popen(
-        ["pkg-config", "--cflags", "ode"],
+        ["pkg-config", "--cflags", "--msvc-syntax", "ode"],
         stdout=PIPE).stdout.read().decode('ascii').split()
     ode_libs = Popen(
-        ["pkg-config", "--libs", "ode"],
+        ["pkg-config", "--libs", "--msvc-syntax", "ode"],
         stdout=PIPE).stdout.read().decode('ascii').split()
 except (OSError, CalledProcessError):
     raise SystemExit("Failed to find ODE with 'pkg-config'. Please make sure "
