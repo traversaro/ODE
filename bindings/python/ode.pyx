@@ -3340,7 +3340,7 @@ cdef class GeomObject:
         @param bits: Collide bit field
         @type bits: int/long
         """
-        dGeomSetCollideBits(self.gid, long(bits))
+        dGeomSetCollideBits(self.gid, bits)
         
     def setCategoryBits(self, bits):
         """setCategoryBits(bits)
@@ -3350,7 +3350,7 @@ cdef class GeomObject:
         @param bits: Category bit field
         @type bits: int/long
         """
-        dGeomSetCategoryBits(self.gid, long(bits))
+        dGeomSetCategoryBits(self.gid, bits)
 
     def getCollideBits(self):
         """getCollideBits() -> long
@@ -4506,3 +4506,4 @@ def InitODE():
 #environment = Body(None)
 environment = None
 InitODE()
+
